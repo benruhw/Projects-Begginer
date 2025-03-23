@@ -1,0 +1,233 @@
+# Calculador de Calorias
+def Volumen(n):
+    print("------------------------------------")
+    print("Que tipo de volumen quieres hacer: ")
+    print("1: Ligero")
+    print("2: Medio")
+    print("3: Fuerte")
+    print("------------------------------------")
+    o = int(input("Elije una opcion: "))
+    print("------------------------------------")
+    if o == 1:
+        vo = n+100
+        print(f"Tus calorias para un volumen de +100 calorias es de: {vo}")
+    
+    elif o == 2:
+        vo = n+300
+        print(f"Tus calorias para un volumen de +300 calorias es de: {vo}")
+
+    elif o == 3:
+        vo = n+500
+        print(f"Tus calorias para un volumen de +500 calorias es de: {vo}")
+    
+    else:
+        print("Opcion incorrecta.")
+
+def Deficit(n):
+    print("------------------------------------")
+    print("Que tipo de definicón quieres hacer: ")
+    print("1: Ligero")
+    print("2: Medio")
+    print("3: Fuerte")
+    print("------------------------------------")
+    o = int(input("Elije una opcion: "))
+    print("------------------------------------")
+    if o == 1:
+        vo = n-100
+        print(f"Tus calorias para una definicion de -100 calorias es de: {vo}")
+    
+    elif o == 2:
+        vo = n-300
+        print(f"Tus calorias para una definicion de -300 calorias es de: {vo}")
+
+    elif o == 3:
+        vo = n-500
+        print(f"Tus calorias para una definicion de -500 calorias es de: {vo}")
+    
+    else:
+        print("Opcion incorrecta.")
+
+
+print("Bienvenido a CaloRat")
+print("-------------------------------------")
+print("Para empezar neseitamos algunos datos")
+estatura = int(input("Ingresa tu estatura: "))
+edad = int(input("Ingresa tu edad: "))
+peso = float(input("Ingresa tu peso: "))
+print("------------------------------------------------")
+print("Elije tu nivel de actividad fisica: ")
+print("------------------------------------------------")
+print("1: Sedentario (poco ejercicio)")
+print("2: Ligero (1-3 días de ejercicio/semana)")
+print("3: Moderado (3-5 días de ejercicio/semana)")
+print("4: Activo (6-7 días de ejercicio/semana)")
+print("5: Muy activo (entrenamientos intensos diarios)")
+print("------------------------------------------------")
+naf = int(input("Elije una opcion: "))
+print("----------------------------------")
+print("Sexo")
+print("----------------------------------")
+print("1: Hombre")
+print("2: Mujer")
+print("----------------------------------")
+sexo = int(input("Elije una opción: "))
+print("Datos guardados.......")
+print("-----------------------------------------------------------")
+print("Calcularemos tus calorias mediante la formula de Harris-Benedict:")
+print("-----------------------------------------------------------")
+if sexo == 1:
+    tm = 88.36+(13.4*peso)+(4.8*estatura)-(5.7*edad)
+    print(f"Tu tasa metabolica basal es de: {tm} Calorias")
+    print("-----------------------------------------------")
+    if naf == 1:
+        n = tm*1.2
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+        
+    elif naf == 2:
+        n = tm*1.375
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    elif naf == 3:
+        n = tm*1.55
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    elif naf == 4:
+        n = tm*1.725
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    elif naf == 5:
+        n = tm*1.9
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    else:
+        print("Opcion Incorrecta")
+
+
+
+elif sexo == 2:
+    tmf = 447.6+(9.2*peso)+(3.1*estatura)-(4.3*edad)
+    print(f"Tu tasa metabolica basal es de: {tmf} Calorias")
+    if naf == 1:
+        n = tmf*1.2
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+        
+    elif naf == 2:
+        n = tmf*1.375
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    elif naf == 3:
+        n = tmf*1.55
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    elif naf == 4:
+        n = tmf*1.725
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    elif naf == 5:
+        n = tmf*1.9
+        print(f"Tus calorias de mantenimiento son: {n}")
+        print("Que quieres hacer: ")
+        print("1: Volumen")
+        print("2: Definicion")
+        o = int(input("Elije una opción: "))
+        if o == 1:
+            Volumen(n)
+        elif o == 2:
+            Deficit(n)
+        else:
+            print("Opcion incorrecta")
+
+    else:
+        print("Opcion Incorrecta")
+else:
+    print("Opcion incorrecta.")
